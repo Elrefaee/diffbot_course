@@ -1,0 +1,9 @@
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/uninstall.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/diff_bot_uninstall.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/test.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/edit_cache.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/rebuild_cache.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/list_install_components.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/install.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/install/local.dir
+/home/elrefaee/course_ws/src/build/diff_bot/CMakeFiles/install/strip.dir

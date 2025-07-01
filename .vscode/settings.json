@@ -1,0 +1,28 @@
+{
+    "files.associations": {
+        "cstring": "cpp",
+        "iosfwd": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/home/elrefaee/turtlebot3_ws/build/turtlebot3_teleop",
+        "/home/elrefaee/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/elrefaee/turtlebot3_ws/build/turtlebot3_launcher",
+        "/home/elrefaee/turtlebot3_ws/install/turtlebot3_launcher/lib/python3.10/site-packages",
+        "/home/elrefaee/turtlebot3_ws/build/turtlebot3_example",
+        "/home/elrefaee/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/elrefaee/turtlebot3_ws/src/turtlebot3_launcher/install/turtlebot3_launcher/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/elrefaee/turtlebot3_ws/build/turtlebot3_teleop",
+        "/home/elrefaee/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/elrefaee/turtlebot3_ws/build/turtlebot3_launcher",
+        "/home/elrefaee/turtlebot3_ws/install/turtlebot3_launcher/lib/python3.10/site-packages",
+        "/home/elrefaee/turtlebot3_ws/build/turtlebot3_example",
+        "/home/elrefaee/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/elrefaee/turtlebot3_ws/src/turtlebot3_launcher/install/turtlebot3_launcher/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

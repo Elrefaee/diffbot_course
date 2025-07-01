@@ -1,0 +1,2 @@
+Invoking command in '/home/elrefaee/course_ws/src/build/serial': /usr/bin/cmake /home/elrefaee/course_ws/src/serial -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/elrefaee/course_ws/src/install/serial
+Invoked command in '/home/elrefaee/course_ws/src/build/serial' returned '1': /usr/bin/cmake /home/elrefaee/course_ws/src/serial -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/elrefaee/course_ws/src/install/serial

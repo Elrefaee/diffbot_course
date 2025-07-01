@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Gazebo Colors -->
+    <gazebo reference="left_wheel_link">
+        <material>
+            Gazebo/Black
+        </material>
+    </gazebo>
+    <gazebo reference="right_wheel_link">
+        <material>
+            Gazebo/Black
+        </material>
+    </gazebo>
+    
+    <xacro:macro name="wheel_link" params="link_name">
+        <link name="${link_name}">
+            <visual>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+                </geometry>
+                <material name="green"/>
+            </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="${wheel_radius}"/>
+                </geometry>
+            </collision>
+            <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}"/>
+        </link>
+    </xacro:macro>
+
+    <!-- Wheel Joint Macro -->
+    <xacro:macro name="wheel_joint" params="joint_name wheel_name x y z roll">
+    <joint name="${joint_name}" type="continuous">
+        <origin xyz="${x} ${y} ${z}" rpy="${roll} 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="${wheel_name}"/>
+        <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+    </xacro:macro>
+
+
+    <!-- Right Wheel -->
+    <xacro:wheel_link link_name="right_wheel_link"/>
+    <xacro:wheel_joint 
+        joint_name="right_wheel_joint" 
+        wheel_name="right_wheel_link" 
+        x="${wheel_offset_x}" 
+        y="${wheel_offset_y}" 
+        z="${wheel_offset_z}" 
+        roll="${pi/2}"/>
+
+    <!-- Left Wheel -->
+    <xacro:wheel_link link_name="left_wheel_link"/>
+    <xacro:wheel_joint 
+        joint_name="left_wheel_joint" 
+        wheel_name="left_wheel_link" 
+        x="${wheel_offset_x}" 
+        y="-${wheel_offset_y}" 
+        z="${wheel_offset_z}" 
+        roll="${pi/2}"/>
+</robot>
