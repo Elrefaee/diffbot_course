@@ -63,10 +63,25 @@ def generate_launch_description():
 
     delayed_diff_drive_spawner = create_delayed_controller_spawner(controller_manager_node, diff_drive_spawner_node)
     delayed_joint_broad_spawner = create_delayed_controller_spawner(controller_manager_node, joint_broad_spawner_node)
+    
+    lidar = Node(
+    package='rplidar_ros',
+    executable='rplidar_composition',
+    output='screen',
+    parameters=[{
+        'serial_port': '/dev/ttyUSB0',
+        'serial_baudrate': 115200,   # A1 / A2
+        # 'serial_baudrate': 256000, # A3
+        'frame_id': 'laser_frame',
+        'inverted': False,
+        'angle_compensate': True,
+    }]
+)
 
     return LaunchDescription([
         rsp_launch,
         TimerAction(period=3.0, actions=[controller_manager_node]),  # Delayed start of the controller manager
         delayed_diff_drive_spawner,  # Delayed start of the diff drive spawner
-        delayed_joint_broad_spawner  # Delayed start of the joint broad spawner
+        delayed_joint_broad_spawner,  # Delayed start of the joint broad spawner
+        lidar
     ])
