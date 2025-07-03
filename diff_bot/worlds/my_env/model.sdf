@@ -1,21 +1,21 @@
 <?xml version='1.0'?>
 <sdf version='1.7'>
   <model name='my_env'>
-    <pose>-5.04231 -8.82919 0 0 -0 0</pose>
-    <link name='Wall_22'>
-      <collision name='Wall_22_Collision'>
+    <pose>4.11354 -2.38797 0 0 -0 0</pose>
+    <link name='Wall_10'>
+      <collision name='Wall_10_Collision'>
         <geometry>
           <box>
-            <size>18.75 0.15 2.5</size>
+            <size>5.5 0.15 2.5</size>
           </box>
         </geometry>
         <pose>0 0 1.25 0 -0 0</pose>
       </collision>
-      <visual name='Wall_22_Visual'>
+      <visual name='Wall_10_Visual'>
         <pose>0 0 1.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>18.75 0.15 2.5</size>
+            <size>5.5 0.15 2.5</size>
           </box>
         </geometry>
         <material>
@@ -29,22 +29,22 @@
           <layer>0</layer>
         </meta>
       </visual>
-      <pose>0.436327 16.2093 0 0 -0 0</pose>
+      <pose>2.5 -4.42362 0 0 -0 3.14159</pose>
     </link>
-    <link name='Wall_23'>
-      <collision name='Wall_23_Collision'>
+    <link name='Wall_11'>
+      <collision name='Wall_11_Collision'>
         <geometry>
           <box>
-            <size>33 0.15 2.5</size>
+            <size>4.15281 0.15 2.5</size>
           </box>
         </geometry>
         <pose>0 0 1.25 0 -0 0</pose>
       </collision>
-      <visual name='Wall_23_Visual'>
+      <visual name='Wall_11_Visual'>
         <pose>0 0 1.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>33 0.15 2.5</size>
+            <size>4.15281 0.15 2.5</size>
           </box>
         </geometry>
         <material>
@@ -58,22 +58,22 @@
           <layer>0</layer>
         </meta>
       </visual>
-      <pose>9.73633 -0.215678 0 0 -0 -1.5708</pose>
+      <pose>-0.25 -2.42362 0 0 -0 1.60828</pose>
     </link>
-    <link name='Wall_27'>
-      <collision name='Wall_27_Collision'>
+    <link name='Wall_5'>
+      <collision name='Wall_5_Collision'>
         <geometry>
           <box>
-            <size>13 0.15 2.5</size>
+            <size>5 0.15 2.5</size>
           </box>
         </geometry>
         <pose>0 0 1.25 0 -0 0</pose>
       </collision>
-      <visual name='Wall_27_Visual'>
+      <visual name='Wall_5_Visual'>
         <pose>0 0 1.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>13 0.15 2.5</size>
+            <size>5 0.15 2.5</size>
           </box>
         </geometry>
         <material>
@@ -87,22 +87,22 @@
           <layer>0</layer>
         </meta>
       </visual>
-      <pose>3.31553 -16.3404 0 0 -0 3.14159</pose>
+      <pose>-2.75 -0.423621 0 0 -0 3.14159</pose>
     </link>
-    <link name='Wall_28'>
-      <collision name='Wall_28_Collision'>
+    <link name='Wall_6'>
+      <collision name='Wall_6_Collision'>
         <geometry>
           <box>
-            <size>23 0.15 2.5</size>
+            <size>5 0.15 2.5</size>
           </box>
         </geometry>
         <pose>0 0 1.25 0 -0 0</pose>
       </collision>
-      <visual name='Wall_28_Visual'>
+      <visual name='Wall_6_Visual'>
         <pose>0 0 1.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>23 0.15 2.5</size>
+            <size>5 0.15 2.5</size>
           </box>
         </geometry>
         <material>
@@ -116,22 +116,22 @@
           <layer>0</layer>
         </meta>
       </visual>
-      <pose>-3.10947 -4.91538 0 0 -0 1.5708</pose>
+      <pose>-5.175 2.00138 0 0 -0 1.5708</pose>
     </link>
-    <link name='Wall_29'>
-      <collision name='Wall_29_Collision'>
+    <link name='Wall_8'>
+      <collision name='Wall_8_Collision'>
         <geometry>
           <box>
-            <size>6.75 0.15 2.5</size>
+            <size>10.5 0.15 2.5</size>
           </box>
         </geometry>
         <pose>0 0 1.25 0 -0 0</pose>
       </collision>
-      <visual name='Wall_29_Visual'>
+      <visual name='Wall_8_Visual'>
         <pose>0 0 1.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>6.75 0.15 2.5</size>
+            <size>10.5 0.15 2.5</size>
           </box>
         </geometry>
         <material>
@@ -145,22 +145,22 @@
           <layer>0</layer>
         </meta>
       </visual>
-      <pose>-6.40947 6.50962 0 0 -0 3.14159</pose>
+      <pose>0 4.42638 0 0 -0 0</pose>
     </link>
-    <link name='Wall_30'>
-      <collision name='Wall_30_Collision'>
+    <link name='Wall_9'>
+      <collision name='Wall_9_Collision'>
         <geometry>
           <box>
-            <size>10.25 0.15 2.5</size>
+            <size>9 0.15 2.5</size>
           </box>
         </geometry>
         <pose>0 0 1.25 0 -0 0</pose>
       </collision>
-      <visual name='Wall_30_Visual'>
+      <visual name='Wall_9_Visual'>
         <pose>0 0 1.25 0 -0 0</pose>
         <geometry>
           <box>
-            <size>10.25 0.15 2.5</size>
+            <size>9 0.15 2.5</size>
           </box>
         </geometry>
         <material>
@@ -174,65 +174,7 @@
           <layer>0</layer>
         </meta>
       </visual>
-      <pose>-9.70947 11.5596 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_31'>
-      <collision name='Wall_31_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.15 2.5</size>
-          </box>
-        </geometry>
-        <pose>0 0 1.25 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_31_Visual'>
-        <pose>0 0 1.25 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.15 2.5</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-9.58572 16.4859 0 0 -0 -0.785398</pose>
-    </link>
-    <link name='Wall_32'>
-      <collision name='Wall_32_Collision'>
-        <geometry>
-          <box>
-            <size>1 0.15 2.5</size>
-          </box>
-        </geometry>
-        <pose>0 0 1.25 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_32_Visual'>
-        <pose>0 0 1.25 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1 0.15 2.5</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-9.03698 16.3621 0 0 -0 0</pose>
+      <pose>5.175 0.001379 0 0 -0 -1.5708</pose>
     </link>
     <static>1</static>
   </model>

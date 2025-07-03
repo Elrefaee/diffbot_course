@@ -14,6 +14,12 @@ def generate_launch_description():
     # === Paths ===
     pkg_diffbot = get_package_share_directory(pkg_name)
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
+    pkg_bot_nav = get_package_share_directory('bot_nav')
+    mapping_launch_path = os.path.join(pkg_bot_nav, 'launch', 'mapping.launch.py')
+
+    mapping_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(mapping_launch_path)
+    )
 
     rsp_path = os.path.join(pkg_diffbot, 'launch', 'rsp.launch.py')
     gazebo_launch_path = os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
@@ -65,5 +71,6 @@ def generate_launch_description():
         rsp,
         gazebo,
         spawn_entity,
+        mapping_launch,
         rviz
     ])
