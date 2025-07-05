@@ -899,28 +899,28 @@
       <pose>7.50258 0.573483 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>1168 446000000</sim_time>
-      <real_time>560 874763085</real_time>
-      <wall_time>1751562479 208985561</wall_time>
-      <iterations>560479</iterations>
+      <sim_time>2338 643000000</sim_time>
+      <real_time>524 360063484</real_time>
+      <wall_time>1751732702 845934961</wall_time>
+      <iterations>523930</iterations>
       <model name='Construction Cone'>
-        <pose>6.93984 -5.81121 6e-06 0 5.8e-05 -0.706463</pose>
+        <pose>6.93984 -5.81121 -0 0 0 -0.706463</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>6.93984 -5.81121 6e-06 0 5.8e-05 -0.706463</pose>
+          <pose>6.93984 -5.81121 -0 0 0 -0.706463</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -9.8 0 -0 0</wrench>
+          <acceleration>0 -0 -0.008512 1.72413 1.1642 -0</acceleration>
+          <wrench>0 -0 -0.008512 0 -0 0</wrench>
         </link>
       </model>
       <model name='Construction Cone_0'>
-        <pose>2.04525 -1.33477 -3.8e-05 0 -0 0.180642</pose>
+        <pose>2.04525 -1.33477 -0 0 -0 0.180642</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>2.04525 -1.33477 -3.8e-05 0 -0 0.180642</pose>
+          <pose>2.04525 -1.33477 -0 0 -0 0.180642</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0 0 -9.8 0 -0 0</acceleration>
-          <wrench>-0 0 -9.8 0 -0 0</wrench>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='Construction Cone_1'>
@@ -954,25 +954,25 @@
         </link>
       </model>
       <model name='my_bot'>
-        <pose>7.42039 -1.22709 0.076262 -0 0.009577 -1.29598</pose>
+        <pose>3.48715 0.375828 0.076262 3e-05 0.009576 -3.11618</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>
-          <pose>7.42039 -1.22709 0.076262 -0 0.009577 -1.29598</pose>
-          <velocity>-0.000522 0.001664 -0.009262 0.033825 0.009495 -0.000509</velocity>
-          <acceleration>0.037345 -0.10034 -4.40566 0.550678 -1.05299 -0.250542</acceleration>
-          <wrench>0.075063 -0.201684 -8.85537 0 -0 0</wrench>
+          <pose>3.48715 0.375828 0.076262 3e-05 0.009576 -3.11618</pose>
+          <velocity>-0.00023 0.000465 -0 -0.060835 -0.001547 -0.001348</velocity>
+          <acceleration>-0.016135 0.632295 -0.000144 0.831529 1.23093 0.780395</acceleration>
+          <wrench>-0.032431 1.27091 -0.00029 0 -0 0</wrench>
         </link>
         <link name='left_wheel_link'>
-          <pose>7.2314 -1.14642 0.032495 -1.57146 1.5665 1.84495</pose>
-          <velocity>-0.000849 0.003061 -0.004918 0.033871 0.009331 -0.000509</velocity>
-          <acceleration>-0.736452 2.61811 -9.83656 1.30994 1.52037 3.02655</acceleration>
-          <wrench>-0.027249 0.09687 -0.363953 0 -0 0</wrench>
+          <pose>3.61197 0.539046 0.03249 1.57139 0.750595 -3.11578</pose>
+          <velocity>-5.3e-05 -0.001375 -0.009844 0.03821 0.000971 -0.001351</velocity>
+          <acceleration>0.286152 -2.71878 -19.6883 0.876856 1.36658 2.30609</acceleration>
+          <wrench>0.010588 -0.100595 -0.728469 0 -0 0</wrench>
         </link>
         <link name='right_wheel_link'>
-          <pose>7.5394 -1.05959 0.032495 1.5708 -0.819325 -1.29599</pose>
-          <velocity>-0.000793 0.002876 -0.004919 0.033833 0.009467 -0.000518</velocity>
-          <acceleration>-0.706327 2.53983 -9.83806 2.42757 1.34272 -0.142506</acceleration>
-          <wrench>-0.026134 0.093974 -0.364008 0 -0 0</wrench>
+          <pose>3.6201 0.219159 0.0325 -1.57001 -0.933919 0.024783</pose>
+          <velocity>-0.000302 -0.001383 0.009849 0.039116 -0.009076 -0.001339</velocity>
+          <acceleration>-0.128242 -2.73187 19.6971 -0.661539 1.06156 -0.78227</acceleration>
+          <wrench>-0.004745 -0.101079 0.728794 0 -0 0</wrench>
         </link>
       </model>
       <model name='my_env'>
@@ -1021,7 +1021,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-2.27673 -0.822498 28.9212 0 1.5458 -1.52299</pose>
+        <pose>6.88418 2.82691 28.9766 0 1.5618 3.00019</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

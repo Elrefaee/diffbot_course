@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <ros2_control name="DiffBot" type="system">
     <hardware>
@@ -8,24 +9,27 @@
       <param name="device">/dev/ttyUSB0</param>
       <param name="timeout">0.5</param>
       <param name="baud_rate">57600</param>
-      <param name="encoder_resolution">500</param>
-      <param name="ticks_per_rev">1500</param>
+      <!-- <param name="encoder_resolution">500</param> -->
+      <!-- <param name="ticks_per_rev">1500</param> -->
+       <param name="enc_counts_per_rev">1500</param>
     </hardware>
 
     <joint name="left_wheel_joint">
-      <command_interface name="velocity"/>
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
-      <param name="min">-10</param>
-      <param name="max">10</param>
     </joint>
 
     <joint name="right_wheel_joint">
-      <command_interface name="velocity"/>
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
       <state_interface name="position"/>
       <state_interface name="velocity"/>
-      <param name="min">-10</param>
-      <param name="max">10</param>
     </joint>
   </ros2_control>
 </robot>

@@ -13,7 +13,7 @@
 
   <!-- Fixed Joint to Mount LiDAR -->
   <joint name="laser_joint" type="fixed">
-    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    <origin xyz="0.0 0 0.08" rpy="0 0 0"/>
     <parent link="chassis_link"/> <!-- Make sure chassis_link is defined elsewhere -->
     <child link="laser_frame"/>
   </joint>
@@ -25,7 +25,7 @@
     <sensor name="laser" type="ray">
       <pose>0 0 0.1 0 0 0</pose>
       <visualize>false</visualize>
-      <update_rate>30.0</update_rate>
+      <update_rate>100.0</update_rate>
 
       <ray>
         <scan>

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="1" name="NavigateRecovery">
+      <PipelineSequence name="NavigateWithReplanning">
+        <ComputePathToPose name="ComputePathToPose"/>
+        <RecoveryNode number_of_retries="1" name="ComputePathRecovery">
+          <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
+        </RecoveryNode>
+        <FollowPath name="FollowPath"/>
+        <RecoveryNode number_of_retries="1" name="FollowPathRecovery">
+          <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap"/>
+        </RecoveryNode>
+      </PipelineSequence>
+      <RecoveryNode name="RecoveryFallback">
+        <RecoveryNode name="RecoveryOptions">
+          <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap"/>
+          <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
+        </RecoveryNode>
+      </RecoveryNode>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

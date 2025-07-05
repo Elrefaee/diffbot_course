@@ -1,60 +1,61 @@
-# File: bringup_sim.launch.py
-
-import os
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
-from launch.conditions import IfCondition
+from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.actions import Node
+from launch.conditions import IfCondition
+
 from ament_index_python.packages import get_package_share_directory
+import os
+
 
 def generate_launch_description():
+
+    gazebo_pkg = 'gazebo_ros'
+    spawn_node = 'spawn_entity.py'
+    spawn_entity = Node(
+        package=gazebo_pkg,
+        executable=spawn_node,
+        name='spawn_entity_node',
+        arguments=[
+            '-topic', 'robot_description',
+            '-entity', 'my_bot'
+        ],
+        output='screen'
+    )
+
+    # Robot state publisher launch
     pkg_name = 'diff_bot'
-    pkg_diffbot = get_package_share_directory(pkg_name)
-    pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
-
-    rsp_path = os.path.join(pkg_diffbot, 'launch', 'rsp.launch.py')
-    gazebo_launch_path = os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
-    world_path = os.path.join(pkg_diffbot, 'worlds', 'sim_world.world')
-    rviz_config_path = os.path.join(pkg_diffbot, 'rviz', 'show_robot.rviz')
-
-    use_rviz = LaunchConfiguration('rviz', default='false')
-
+    rsp_file = 'rsp.launch.py'
+    rsp_path = os.path.join(get_package_share_directory(pkg_name), 'launch', rsp_file)
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(rsp_path)
     )
 
+    # Gazebo launch
+    gazebo_file = 'gazebo.launch.py'
+    gazebo_path = os.path.join(get_package_share_directory(gazebo_pkg), 'launch', gazebo_file)
+    world_path = os.path.join(get_package_share_directory(pkg_name), 'worlds', 'sim_world.world')
     gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(gazebo_launch_path),
+        PythonLaunchDescriptionSource(gazebo_path),
         launch_arguments={'world': world_path}.items()
     )
 
-    spawn_entity = TimerAction(
-        period=2.0,
-        actions=[
-            Node(
-                package='gazebo_ros',
-                executable='spawn_entity.py',
-                name='spawn_entity',
-                arguments=['-topic', 'robot_description', '-entity', 'my_bot'],
-                output='screen'
-            )
-        ]
-    )
-
+    # RViz launch
+    rviz_config_file = os.path.join(get_package_share_directory(pkg_name), 'rviz', 'show_robot.rviz')
+    use_rviz = LaunchConfiguration('rviz', default='false')
     rviz = Node(
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        arguments=['-d', rviz_config_path],
-        condition=IfCondition(use_rviz),
-        output='screen'
+        arguments=['-d', rviz_config_file],
+        output='screen',
+        condition=IfCondition(use_rviz)
     )
 
     return LaunchDescription([
-        rsp,
         gazebo,
         spawn_entity,
-        rviz
+        rviz,
+        rsp
     ])

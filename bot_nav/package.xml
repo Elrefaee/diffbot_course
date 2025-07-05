@@ -1,16 +1,23 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>bot_nav</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="yoyotarek91.yt@gmail.com">elrefaee</maintainer>
-  <license>TODO: License declaration</license>
+  <version>0.1.0</version>
+  <description>Navigation support package for bot with SLAM and AMCL support.</description>
 
+  <maintainer email="yoyotarek91.yt@gmail.com">elrefaee</maintainer>
+  <license>MIT</license>
+
+  <!-- Build system -->
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <!-- Runtime dependencies -->
   <depend>rclcpp</depend>
+  <depend>nav2_amcl</depend>
+  <depend>nav2_map_server</depend>
+  <depend>nav2_lifecycle_manager</depend>
+  <depend>slam_toolbox</depend>
 
+  <!-- Optional testing tools -->
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
