@@ -10,6 +10,7 @@ def generate_launch_description():
     pkg_bot_nav = get_package_share_directory('bot_nav')
     config_dir = os.path.join(pkg_bot_nav, 'config')
     slam_config_path = os.path.join(config_dir, 'mapper_params_online_async.yaml')
+    rviz_config_file = os.path.join(pkg_bot_nav, 'rviz', 'mapping.rviz')
 
     slam_toolbox = TimerAction(
         period=2.0,
@@ -44,8 +45,16 @@ def generate_launch_description():
         }]
     )
 
+    rviz = Node(
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', rviz_config_file],
+        output='screen'
+    )
+
     return LaunchDescription([
         slam_toolbox,
         map_saver,
-        lifecycle_manager
+        lifecycle_manager,
+        rviz
     ])

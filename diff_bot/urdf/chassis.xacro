@@ -13,17 +13,17 @@
         <visual>
             <geometry>
                 <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
-                <origin xyz="${chassis_length/2} 0.0 ${chassis_height/2}" rpy="0.0 0.0 0.0"/>
+                <origin xyz="${chassis_length/2} 0.0 ${chassis_height}" rpy="0.0 0.0 0.0"/>
             </geometry>
         </visual>
         <collision>
             <geometry>
                 <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
-                <origin xyz="${chassis_length/2} 0.0 ${chassis_height/2}" rpy="0.0 0.0 0.0"/>
+                <origin xyz="${chassis_length/2} 0.0 ${chassis_height}" rpy="0.0 0.0 0.0"/>
             </geometry>
         </collision>
         <xacro:inertial_box mass="2" x="0.4" y="0.3" z="0.11"/>
-        <origin xyz="${chassis_length/2} 0.0 ${chassis_height/2}" rpy="0.0 0.0 0.0"/>
+        <origin xyz="${chassis_length/2} 0.0 ${chassis_height}" rpy="0.0 0.0 0.0"/>
     </link>
 
     <joint name="chassis_joint" type="fixed">

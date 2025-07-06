@@ -19,7 +19,7 @@ def generate_launch_description():
         name='spawn_entity_node',
         arguments=[
             '-topic', 'robot_description',
-            '-entity', 'my_bot'
+            '-entity', 'my_bot','-x','0','-y','0'
         ],
         output='screen'
     )
